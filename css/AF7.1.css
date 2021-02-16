@@ -1,0 +1,148 @@
+/* jQuery and flex boxes 2021 */
+/* Write the rules of style in an orderly and optimal way */
+
+/* 
+    COLOR URL: https://color.adobe.com/Quincena%209-color-theme-16972650
+*/
+* {
+    margin: 0;
+    padding: 0;
+}
+body {
+    display: block;
+    width: 100%;
+    display: grid;
+    background-color: #BBDEED;
+    grid-template-rows: 12vh 12vh auto 8vh;
+}
+main {
+    display: grid;
+        
+}
+header, nav {
+    display: flex;
+    height: 12vh;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 2vw;
+    text-align: center;
+}
+header {
+    background-color: #5F8FA3;
+    color: #EDEBB9;
+    font-size: 1.5rem;
+}
+header img {
+    height: 10vh;
+}
+header img:first-child {
+    position: relative;    
+    left: 0;
+    animation: fadeZoomInRight 3s linear;    
+}
+h1 {
+    text-shadow: 3px 4px 6px #A17078;
+    font-size: larger;
+}
+div > h2 {
+    font-size: large;
+}
+nav > button {
+    width: 28vw;
+    height: 7vh;
+    background-color: #EDEBB9;
+    border: none;
+    box-shadow: 2px 2px 3px #A17078;
+    font-size: 1.8rem;
+    font-weight: bold;
+}
+div + div {
+    display: none;
+    position: absolute;    
+    left: 0;
+    top: 0;  
+    width: 100%; 
+    height: 100%; 
+}
+div + div > img {
+    object-fit: cover;  
+    width: 100%; 
+    height: 100%;   
+}
+div + div> button {
+    position: absolute;
+    left: calc(100% - 2.5rem);
+    top: 0.5rem;
+    width: 2rem;
+    height: 2rem;
+    border-radius: 10%;
+    color: red;
+    font-weight: 900; 
+    font-size: 1.2rem;
+    background-color: white;   
+}
+section {
+    padding: 1rem 2rem;
+    text-align: center;
+    background-color: white;
+    margin-bottom: 1vh;
+    position: relative;
+}
+section:nth-child(odd) {
+    background-color: #5F8FA3; 
+    color: white;
+}
+p {
+    text-align: justify;
+    margin: 2rem;
+}
+section > div {
+    margin-bottom: 6rem;
+}
+a {
+    background-color: #EDEBB9;
+    color: black;    
+    border-radius: 30px;    
+    text-decoration: none;
+    width: 150px;
+    padding: 1vh 8vw;    
+    position: absolute;
+    bottom: 2rem;  
+    transform: translateX(-50%);  
+    font-size: 1.5rem;
+}
+footer {
+    height: 8vh;
+    font-size: 1rem;    
+    background: radial-gradient(circle, #EDBEC5 20%, #A17078 80% );
+    margin-top: 1vh;    
+}
+footer h3 {
+    float: left;
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+    margin: 0 4vw;   
+    font-style: italic;
+    text-shadow: 2px 2px 2px #BBDEED;
+}
+footer h3 + h3 {
+    float: right;
+}
+footer::after {     
+    content: ""; 
+    clear: both; 
+    display: table; 
+}
+@keyframes fadeZoomInRight {
+    from {
+        opacity: 0;
+        left: 80vw;
+        transform: scale(0.1, 0.1);        
+    }
+    100% {
+        opacity: 1;   
+        left: 0;     
+        transform: scale(1, 1);
+    }
+}
